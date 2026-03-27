@@ -2,12 +2,12 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: blank # the website title (if blank, full name will be used instead)
+title: Ying Zhou # the website title (if blank, full name will be used instead)
 first_name: Ying
 middle_name: 
 last_name: Zhou
 contact_note: >
-  Email: yzhou59@buffalo.edu
+  Feel free to reach out via email for research collaboration or academic inquiries.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Geography PhD student at the University at Buffalo.
 footer_text: >
