@@ -2,33 +2,38 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: PhD Student in Geography at University at Buffalo | Noboday
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Office: 480</p>
-    <p>The Department of Geography</p>
-    <p>Buffalo, NY</p>
+  yzhou59@buffalo.edu
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
 
 announcements:
-  enabled: true # includes a list of news items
+  enabled: false # includes a list of news items
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
   limit: 5 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
-  enabled: true
+  enabled: false
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+Hi, I'm a PhD student in Geography at the University at Buffalo, advised by Professor Andrew Crooks. My research interests focus on urban emotions, spatial analysis, and Natural Language Processing (NLP). Prior to my PhD journey, I received my master’s degree in urban and Regional Planning at the University of Florida, and I worked as a research assistant and planner for four years.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+My current work explores how social media data can be used to understand people’s expressions about their experiences in urban environments. For example, comparing safety-related fear and crime in New York City. I am interested in combining spatial statistics, machine learning, and text mining to better understand the relationships between people and places.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+<p style="color:gray; font-style:italic; margin-top:20px;">
+I am just another person trying to make sense of cities, emotions, and everyday life.
+</p>
+
+<p style="color:gray; font-style:italic;">
+“I am busy doing nothing, doing nothing that’s the life for me.”
+— Winnie the Pooh
+</p>
