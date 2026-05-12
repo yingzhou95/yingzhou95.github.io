@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: PhD Student in Geography at University at Buffalo | Noboday
+subtitle: PhD Student in Geography at University at Buffalo
 
 profile:
   align: right
