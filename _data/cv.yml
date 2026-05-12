@@ -55,22 +55,6 @@ cv:
         end_date: 2016
 
 
-    Volunteer:
-      - name: Mechanic Innocation Contest, Youth Volunteer Association
-        position: Organizer
-        location: Wuhan, Hubei, China
-        start_date: 2014-05
-        end_date: 2014-05
-        highlights:
-          - "Excellent Volunteer Award" by Jianghan University
-
-      - name: Pizza Hut Green Superman, Youth Volunteer Association
-        position: Team Leader
-        location: Wuhan, Hubei, China
-        start_date: 2013-11
-        end_date: 2013-11
-
-
     Skills:
       - name: Programming
         keywords: "Python, R, and SAS"
@@ -93,4 +77,4 @@ cv:
         summary: "Hunter×Hunter, EVA, Naruto, Crayon Shin-chan, The King's Avatar (only 1st season & SP ( ˘̀^˘́ )), Nine Songs of the Moving Heavens, etc."
 
       - name: Favorite Thing
-        summary: Doing nothing
+        summary: "Doing nothing"
