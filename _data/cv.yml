@@ -70,10 +70,10 @@ cv:
 
     Interests:
       - name: Favorite Singer
-        summary: "Leehom Wang"
+        keywords: "Leehom Wang"
 
       - name: Animation
-        summary: "Hunter×Hunter, EVA, Naruto, Crayon Shin-chan, The King's Avatar (only 1st season & SP ( ˘̀^˘́ )), Nine Songs of the Moving Heavens, etc."
+        keywords: "Hunter×Hunter, EVA, Naruto, Crayon Shin-chan, The King's Avatar (only 1st season & SP ( ˘̀^˘́ )), Nine Songs of the Moving Heavens, etc."
 
       - name: Favorite Thing
-        summary: "Doing nothing"
+        keywords: "Doing nothing"
