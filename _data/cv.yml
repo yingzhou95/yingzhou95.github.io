@@ -10,7 +10,7 @@ cv:
         area: Geography
         studyType: PhD
         start_date: 2024
-        end_date: present
+        end_date: "Present"
 
       - institution: University of Florida
         location: Gainesville, FL, US
@@ -31,10 +31,10 @@ cv:
         position: Teaching Assistant
         location: Buffalo, NY
         start_date: 2024
-        end_date: Present
+        end_date: "Present"
         highlights:
-          - GEO 105: Earth, Environment and Climate Lab
-          - GEO 481/506: GIS Lab
+          - "GEO 105: Earth, Environment and Climate Lab"
+          - "GEO 481/506: GIS Lab"
       
       - company: Wuhan Land Use and Urban Spatial Planning Research Center
         position: Research Assistant & Planner
@@ -42,11 +42,11 @@ cv:
         start_date: 2020
         end_date: 2024
         highlights:
-          - Qualified intermediate engineer.
-          - Research assistant of the Workshop on Sustainable Community Planning.
-          - Participate in various joint studies with UN-Habitat.
-          - Project mamangement.
-          - Social media operation.
+          - "Qualified intermediate engineer."
+          - "Research assistant of the Workshop on Sustainable Community Planning."
+          - "Participate in various joint studies with UN-Habitat."
+          - "Project mamangement."
+          - "Social media operation."
 
       - company: Wuhan Institute of Urban Planning & Design
         position: Intern
