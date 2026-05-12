@@ -25,7 +25,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Hi, I'm a PhD student in Geography at the University at Buffalo, advised by Professor Andrew Crooks. My research interests focus on urban emotions, spatial analysis, and Natural Language Processing (NLP). Prior to my PhD journey, I received my master’s degree in urban and Regional Planning at the University of Florida, and I worked as a research assistant and planner for four years.
+Hi, I'm a PhD student in Geography at the University at Buffalo, advised by Professor Andrew Crooks. My research interests focus on urban emotions, spatial analysis, and Natural Language Processing (NLP). Prior to my PhD journey, I received my master’s degree in Urban and Regional Planning at the University of Florida, and I worked as a research assistant and planner for four years.
 
 My current work explores how social media data can be used to understand people’s expressions about their experiences in urban environments. For example, comparing safety-related fear and crime in New York City. I am interested in combining spatial statistics, machine learning, and text mining to better understand the relationships between people and places.
 
