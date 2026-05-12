@@ -1,7 +1,6 @@
 cv:
   name: Ying Zhou
   email: yzhou59@buffalo.edu
-  image: ""
 
   sections:
     Education:
@@ -10,7 +9,7 @@ cv:
         area: Geography
         studyType: PhD
         start_date: 2024
-        end_date: "Present"
+        end_date: "present"
 
       - institution: University of Florida
         location: Gainesville, FL, US
@@ -31,7 +30,7 @@ cv:
         position: Teaching Assistant
         location: Buffalo, NY
         start_date: 2024
-        end_date: "Present"
+        end_date: "present"
         highlights:
           - "GEO 105: Earth, Environment and Climate Lab"
           - "GEO 481/506: GIS Lab"
