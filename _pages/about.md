@@ -31,13 +31,13 @@ Hi, I'm a PhD student in Geography at the University at Buffalo, advised by <a h
 
 My current work explores how social media data can be used to understand people’s expressions about their experiences in urban environments. For example, I examine the relationship between safety-related fear and crime in New York City. I am interested in combining spatial statistics, machine learning, and text mining to better understand the relationships between people and places.
 
-<div style="color:gray; font-style:italic; margin-top:20px;">
+<div style="margin-top:20px; color: #777;">
 
-<p>
+<p style="font-style: italic;">
 I am just another person trying to make sense of cities, emotions, and everyday life.
 </p>
 
-<p>
+<p style="font-style: italic;">
 “I am busy doing nothing, doing nothing that’s the life for me.” — Winnie the Pooh
 </p>
 
