@@ -7,23 +7,21 @@ nav: true
 nav_order: 2
 ---
 
-<!-- _pages/publications.md -->
-
-<!-- Bibsearch Feature -->
-
-{% include bib_search.liquid %}
-
-<div class="publications">
-
-## Journal Articles
+<h2 style="text-align:center; color: var(--global-theme-color); margin-top: 3rem; margin-bottom: 2rem;">
+Journal Articles
+</h2>
 
 {% bibliography --query @article %}
 
-## Conference Papers
+<h2 style="text-align:center; color: var(--global-theme-color); margin-top: 4rem; margin-bottom: 2rem;">
+Conference Papers
+</h2>
 
 {% bibliography --query @inproceedings %}
 
-## Dissertations
+<h2 style="text-align:center; color: var(--global-theme-color); margin-top: 4rem; margin-bottom: 2rem;">
+Dissertations
+</h2>
 
 {% bibliography --query @mastersthesis %}
 
