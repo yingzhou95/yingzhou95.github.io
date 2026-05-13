@@ -3,14 +3,6 @@ layout: default
 ---
 {% comment %}
   Unified CV layout that handles both RenderCV (YAML) and JSONResume (JSON) formats
-  - If page.cv_format is set, it determines which format to render:
-    - 'rendercv': Load and render only RenderCV data (site.data.cv.cv)
-    - 'jsonresume': Load and render only JSONResume data (site.data.resume)
-  - If page.cv_format is not set, the legacy behavior applies:
-    - RenderCV data is in site.data.cv.cv
-    - JSONResume data is in site.data.resume
-    - RenderCV is prioritized if both exist
-  Both formats use the same unified rendering includes for consistent output
 {% endcomment %}
 
 <div class="post">
@@ -39,7 +31,6 @@ layout: default
 
   <article>
     <div class="cv">
-      {% comment %} Determine which CV format to render {% endcomment %}
       {% assign render_rendercv = false %}
       {% assign render_jsonresume = false %}
 
@@ -48,7 +39,6 @@ layout: default
       {% elsif page.cv_format == 'jsonresume' %}
         {% assign render_jsonresume = true %}
       {% else %}
-        {% comment %} Legacy behavior: RenderCV takes priority if both exist {% endcomment %}
         {% if site.data.cv and site.data.cv.cv %}
           {% assign render_rendercv = true %}
         {% elsif site.data.resume %}
@@ -57,7 +47,6 @@ layout: default
       {% endif %}
 
       {% if render_rendercv and site.data.cv and site.data.cv.cv %}
-        {% comment %} RenderCV format {% endcomment %}
         {% assign cv = site.data.cv.cv %}
 
         <!-- Header/Contact Information -->
@@ -120,32 +109,10 @@ layout: default
           </div>
         {% endif %}
 
-        <!-- RenderCV Sections - Merge Experience and Volunteer -->
-        {% comment %} First, combine Experience and Volunteer entries {% endcomment %}
-        {% assign empty_array = '' | split: ',' %}
-        {% assign exp = cv.sections.Experience | default: empty_array %}
-        {% assign vol = cv.sections.Volunteer | default: empty_array %}
-        {% assign combined_experience = exp | concat: vol %}
-        {% if combined_experience.size > 0 %}
-          <a class="anchor" id="experience"></a>
-          <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">Experience</h3>
-            <div>
-              {% assign entries = combined_experience %}
-              {% include cv/experience.liquid %}
-            </div>
-          </div>
-        {% endif %}
-
-        {% comment %} Now render all other sections except Experience and Volunteer {% endcomment %}
+        <!-- RenderCV Sections in cv.yml order -->
         {% for section_pair in cv.sections %}
           {% assign section_title = section_pair[0] %}
           {% assign section_entries = section_pair[1] %}
-
-          {% comment %} Skip Experience and Volunteer as we've already processed them combined {% endcomment %}
-          {% if section_title == 'Experience' or section_title == 'Volunteer' %}
-            {% continue %}
-          {% endif %}
 
           <a class="anchor" id="{{ section_title | slugify }}"></a>
           <div class="card mt-3 p-3">
@@ -154,6 +121,9 @@ layout: default
               {% if section_title == 'Education' %}
                 {% assign entries = section_entries %}
                 {% include cv/education.liquid %}
+              {% elsif section_title == 'Experience' or section_title == 'Volunteer' %}
+                {% assign entries = section_entries %}
+                {% include cv/experience.liquid %}
               {% elsif section_title == 'Awards' or section_title == 'Honors and Awards' %}
                 {% assign entries = section_entries %}
                 {% include cv/awards.liquid %}
@@ -179,7 +149,6 @@ layout: default
                 {% assign entries = section_entries %}
                 {% include cv/references.liquid %}
               {% else %}
-                <!-- Generic section -->
                 {% for entry in section_entries %}
                   {% if entry.bullet %}
                     <ul class="card-text font-weight-light list-group list-group-flush">
@@ -197,13 +166,11 @@ layout: default
         {% endfor %}
 
       {% elsif render_jsonresume and site.data.resume %}
-        {% comment %} JSONResume format {% endcomment %}
+        {% assign basics = site.data.resume.basics %}
 
-        <!-- Contact Information -->
-        {% if site.data.resume.basics %}
+        {% if basics %}
           <div class="card mt-3 p-3">
             <h3 class="card-title font-weight-medium">Contact Information</h3>
-            {% assign basics = site.data.resume.basics %}
             <table class="table table-cv table-sm table-borderless">
               {% if basics.name %}
                 <tr>
@@ -252,7 +219,6 @@ layout: default
           </div>
         {% endif %}
 
-        <!-- Summary -->
         {% if site.data.resume.basics.summary %}
           <div class="card mt-3 p-3">
             <h3 class="card-title font-weight-medium">Professional Summary</h3>
@@ -260,7 +226,17 @@ layout: default
           </div>
         {% endif %}
 
-        <!-- JSONResume Sections - Merge work and volunteer into Experience -->
+        {% if site.data.resume.education.size > 0 %}
+          <a class="anchor" id="education"></a>
+          <div class="card mt-3 p-3">
+            <h3 class="card-title font-weight-medium">Education</h3>
+            <div>
+              {% assign entries = site.data.resume.education %}
+              {% include cv/education.liquid %}
+            </div>
+          </div>
+        {% endif %}
+
         {% assign empty_array = '' | split: ',' %}
         {% assign work = site.data.resume.work | default: empty_array %}
         {% assign vol = site.data.resume.volunteer | default: empty_array %}
@@ -276,19 +252,6 @@ layout: default
           </div>
         {% endif %}
 
-        <!-- Education -->
-        {% if site.data.resume.education.size > 0 %}
-          <a class="anchor" id="education"></a>
-          <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">Education</h3>
-            <div>
-              {% assign entries = site.data.resume.education %}
-              {% include cv/education.liquid %}
-            </div>
-          </div>
-        {% endif %}
-
-        <!-- Awards -->
         {% if site.data.resume.awards.size > 0 %}
           <a class="anchor" id="awards"></a>
           <div class="card mt-3 p-3">
@@ -300,7 +263,6 @@ layout: default
           </div>
         {% endif %}
 
-        <!-- Publications -->
         {% if site.data.resume.publications.size > 0 %}
           <a class="anchor" id="publications"></a>
           <div class="card mt-3 p-3">
@@ -312,7 +274,6 @@ layout: default
           </div>
         {% endif %}
 
-        <!-- Skills -->
         {% if site.data.resume.skills.size > 0 %}
           <a class="anchor" id="skills"></a>
           <div class="card mt-3 p-3">
@@ -324,7 +285,6 @@ layout: default
           </div>
         {% endif %}
 
-        <!-- Languages -->
         {% if site.data.resume.languages.size > 0 %}
           <a class="anchor" id="languages"></a>
           <div class="card mt-3 p-3">
@@ -336,7 +296,6 @@ layout: default
           </div>
         {% endif %}
 
-        <!-- Interests -->
         {% if site.data.resume.interests.size > 0 %}
           <a class="anchor" id="interests"></a>
           <div class="card mt-3 p-3">
@@ -348,7 +307,6 @@ layout: default
           </div>
         {% endif %}
 
-        <!-- Certificates -->
         {% if site.data.resume.certificates.size > 0 %}
           <a class="anchor" id="certificates"></a>
           <div class="card mt-3 p-3">
@@ -360,7 +318,6 @@ layout: default
           </div>
         {% endif %}
 
-        <!-- Projects -->
         {% if site.data.resume.projects.size > 0 %}
           <a class="anchor" id="projects"></a>
           <div class="card mt-3 p-3">
@@ -372,7 +329,6 @@ layout: default
           </div>
         {% endif %}
 
-        <!-- References -->
         {% if site.data.resume.references.size > 0 %}
           <a class="anchor" id="references"></a>
           <div class="card mt-3 p-3">
