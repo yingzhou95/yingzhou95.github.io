@@ -1,11 +1,13 @@
 ---
 layout: post
-title: For My Friends - A Masterpiece I Made for them
+title: For My Friends - A Masterpiece I Made for Them
 date: 2026-05-13
 description: The first post to remember the great "art" I made for my friends, they said:" Dare you post it!!!" Got it, they hope to be my first post.
 tags: formatting videos
 categories: sample-posts
 ---
+
+The first post to remember the great "art" I made for my friends, they said:" Dare you post it!!!" Got it, they hope to be my first post.
 
 Persons in this video:
 - Xinyi Yang (132206301114)
