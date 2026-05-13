@@ -39,7 +39,7 @@ ninja.data = [{
           },
         },{id: "post-for-my-friends-a-masterpiece-i-made-for-them",
         
-          title: "For My Friends - A Masterpiece I Made for them",
+          title: "For My Friends - A Masterpiece I Made for Them",
         
         description: "The first post to remember the great &quot;art&quot; I made for my friends, they said:&quot; Dare you post it!!!&quot; Got it, they hope to be my first post.",
         section: "Posts",
