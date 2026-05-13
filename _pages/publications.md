@@ -15,6 +15,16 @@ nav_order: 2
 
 <div class="publications">
 
-{% bibliography %}
+## Journal Articles
+
+{% bibliography --query @article %}
+
+## Conference Papers
+
+{% bibliography --query @inproceedings %}
+
+## Dissertations
+
+{% bibliography --query @mastersthesis %}
 
 </div>
