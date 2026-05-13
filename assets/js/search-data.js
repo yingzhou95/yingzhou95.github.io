@@ -37,15 +37,15 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-test",
+        },{id: "post-for-my-friends-a-masterpiece-i-made-for-them",
         
-          title: "Test",
+          title: "For My Friends - A Masterpiece I Made for them",
         
-        description: "",
+        description: "The first post to remember the great &quot;art&quot; I made for my friends, they said:&quot; Dare you post it!!!&quot; Got it, they hope to be my first post.",
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2026/test/";
+            window.location.href = "/blog/2026/first_video/";
           
         },
       },{id: "post-google-gemini-updates-flash-1-5-gemma-2-and-project-astra",
