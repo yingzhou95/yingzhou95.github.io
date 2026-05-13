@@ -24,7 +24,7 @@ Conference Papers
 {% bibliography --query @inproceedings %}
 
 <h2 style="text-align:center; color: var(--global-theme-color); margin-top: 4rem; margin-bottom: 2rem;">
-Theses
+Dissertation
 </h2>
 
 {% bibliography --query @mastersthesis %}
