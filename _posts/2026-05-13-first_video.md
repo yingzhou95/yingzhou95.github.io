@@ -13,7 +13,7 @@ Persons in this video:
 - Xinyi Yang (132206301114)
 - Ejing Chang
 - Ying Huang
-- Yin Yang
+- Ying Yang
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
